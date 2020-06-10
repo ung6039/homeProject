@@ -13,19 +13,23 @@ function Header() {
                             <span className="icon-bar"></span>
                             <span className="icon-bar"></span>
                         </button>
-                        <NavLink className="navbar-brand" to={"/"}>편의점 끝판왕</NavLink>
+                        <NavLink className="navbar-brand" to={"/"}>편의점</NavLink>
                     </div>
                     <div className="collapse navbar-collapse" id="myNavbar">
                         <ul className="nav navbar-nav navbar-right">
-                            <li><NavLink exact  to={"/"}>HOME</NavLink></li>
+                            <li><NavLink exact  to={"/"}>전체</NavLink></li>
                             <li><NavLink to={"/emart24"}>이마트24</NavLink></li>
                             <li><NavLink to={"/cu"}>CU</NavLink></li>
                             <li><NavLink to={"/gs25"}>GS25</NavLink></li>
-                            <li><NavLink to={"/news"}>NEWS</NavLink></li>
+                            <li><NavLink to={"/news"}>편의점 톡톡</NavLink></li>
                         </ul>
                     </div>
                 </div>
             </nav>
+
+            <div className="jumbotron text-center">
+                <h1>편의점 정복</h1>
+            </div>
         </Fragment>
     )
 }

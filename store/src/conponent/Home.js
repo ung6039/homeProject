@@ -1,5 +1,7 @@
-import React, {Fragment, useEffect, useState} from "react";
+import React,{useEffect,useState} from "react";
 import {useDispatch,useSelector} from "react-redux";
+import {fetchCategory} from '../actions/FoodActions'
+import {FETCH_CATEGORY} from "../actions/type";
 import axios from 'axios'
 import {NavLink} from "react-router-dom";
 
@@ -11,9 +13,11 @@ import {NavLink} from "react-router-dom";
 
  */
 export default function Home(props) {
+    const dispatch = useDispatch() // reduce를 연결 => action => { type,data }
+
     return (
-        <div className="jumbotron text-center">
-            <h1>편의점 끝판왕</h1>
+        <div className={"row"}>
+            HOME
         </div>
     )
 }
