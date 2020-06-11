@@ -80,16 +80,16 @@ export function fetchTotal(){
     }
 }
 
-export function fetchdetail(props){
-    return function(dispatch){
-        console.log("action "+dispatch)
-        axios.get('http://localhost:3355/detail',{
-            params:{
-                no:props.match.params.no
-            }
-        }).then(detail =>dispatch({
-            type:FETCH_DETAIL,
-            payload:detail.data
-        }))
-    }
-}
+// export function fetchdetail(props){
+//     return function(dispatch){
+//         console.log("action "+dispatch)
+//         axios.get('http://localhost:3355/detail',{
+//             params:{
+//                 no:props.match.params.no
+//             }
+//         }).then(detail =>dispatch({
+//             type:FETCH_DETAIL,
+//             payload:detail.data
+//         }))
+//     }
+// }

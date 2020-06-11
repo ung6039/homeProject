@@ -103,8 +103,8 @@ app.get('/detail',(req,res)=>{
         var db=client.db("mydb")
         // Table => Collection => recipe
         db.collection('store').find({no:Number(no)}).toArray((err,docs)=>{
-            res.json(docs)
-            console.log(docs)
+            res.json(docs[0])
+            console.log(docs[0])
             client.close()
         })
     })
