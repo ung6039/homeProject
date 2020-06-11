@@ -11,6 +11,7 @@ import Board from "./conponent/Board"
 import {Provider} from "react-redux";
 import store from './store/Store'
 import {BrowserRouter as Router,Switch,Route }from "react-router-dom";
+import DetailProduct from "./conponent/DetailProduct";
 
 function App() {
   return (
@@ -21,8 +22,10 @@ function App() {
           <Route exact path={"/"} component={Home}/>
           {/*<Route path={"/news"} component={News}/>*/}
           <Route path={"/gs25"} component={GS25}/>
-          <Route path={"/cu"} compoent={CU}/>
+          <Route path={"/cu"} component={CU} />
           <Route path={"/emart24"} component={Emart24}/>
+          <Route path={"/detail/:no"} component={DetailProduct}/>
+          <Route path={"/news"} component={News}/>
           {/*<Route path={"/board"} component={Board}/>*/}
         </Switch>
       </Router>

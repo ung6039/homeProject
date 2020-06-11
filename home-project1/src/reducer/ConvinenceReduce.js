@@ -1,11 +1,13 @@
-import {FETCH_EMART24,FETCH_CU,FETCH_GS25,FETCH_NEWS,FETCH_TOTAL} from "../actions/types";
+import {FETCH_EMART24, FETCH_CU, FETCH_GS25, FETCH_NEWS, FETCH_TOTAL, FETCH_DETAIL} from "../actions/types";
 
 const initialState={
     gs25:[],
     cu:[],
     emart24:[],
     board:[],
-    news:[]
+    news:[],
+    total:[],
+    detail:{}
 }
 export default function (state=initialState,action) {
     switch (action.type) {
@@ -28,6 +30,16 @@ export default function (state=initialState,action) {
             return {
                 ...state,
                 gs25: action.payload
+            }
+        case FETCH_TOTAL:
+            return {
+                ...state,
+                total:action.payload
+            }
+        case FETCH_DETAIL:
+            return {
+                ...state,
+                detail:action.payload
             }
         default:
             return state

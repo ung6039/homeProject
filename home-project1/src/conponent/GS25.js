@@ -10,6 +10,7 @@ export default function GS25(props) {
     useEffect(()=>{
         dispatch(fetchgs25())
     },[])
+
     const gs25_data = useSelector(state=>state.product.gs25)
     const html=gs25_data.map((m)=>
         <div className="col-md-4">
@@ -24,9 +25,7 @@ export default function GS25(props) {
         </div>
     )
     return (
-
-
-        <div className={"row"} style={{"margin":"0px auto","width":"900px"}}>
+        <div className={"jumbotron text-center"} style={{"margin":"0px auto","width":"900px"}}>
                 <h1 className={"text-center"}>GS25</h1>
             {html}
         </div>
